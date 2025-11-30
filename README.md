@@ -3,7 +3,7 @@ Copying Karpathys nano chat with some small modifications to the training stack.
 
 ### TODO
 - [ ] Model
-- [x] Data
+- [ ] Data
     - [ ] Pretraining
     - [ ] Midtraining
     - [ ] Posttraining
