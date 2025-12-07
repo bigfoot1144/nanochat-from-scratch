@@ -44,7 +44,7 @@ def compute_rope_params(head_dim, theta_base=10_000, context_length=4096, dtype=
     assert head_dim % 2 == 0, "Embedding dimension must be even"
 
     # Compute the inverse frequencies
-    inv_freq = 1.0 / (theta_base ** (torch.arange(0, head_dim, 2, dtype=dtype)[: (head_dim // 2)].float() / head_dim))
+    inv_freq = 1.0 / (theta_base ** (torch.arange(0, head_dim, 2, dtype=dtype).float() / head_dim))
 
     # Generate position indices
     positions = torch.arange(context_length, dtype=dtype)
